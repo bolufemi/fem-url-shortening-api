@@ -1,0 +1,103 @@
+@use '../util' as *;
+
+.app__cta {
+    background-color: var(--dark-violet);
+    text-align: center;
+    padding-bottom: rem(82);
+    margin-top: rem(-88);
+    background-image: url(/images/bg-boost-mobile.svg);
+
+    @include breakpoint(large) {
+        background-image: url(/images/bg-boost-desktop.svg);
+        padding-bottom: rem(30);
+    }
+
+    h2 {
+        padding-top: rem(100);
+        text-align: center;
+        font-size: rem(26);
+        color: hsl(0, 0%, 100%);
+
+        @include breakpoint(large) {
+            padding-top: rem(68);
+            font-size: rem(48);
+        }    
+    }
+    .btn-secondary {
+        @extend %btn;
+        margin-top: rem(18);
+
+        @include breakpoint(large) {
+            font-size: rem(20);
+        }    
+    }
+
+}
+
+.footer {
+    background-color: var(--vd-violet);
+
+    .container {
+        text-align: center;
+        @include breakpoint(large) {
+            display: flex;
+            justify-content: space-around;
+            padding-top: rem(70);    
+        }
+    }
+
+    .foot__logo {
+        padding-top: rem(54) ;
+        margin-bottom: rem(35);
+        filter: brightness(0) invert(1);
+
+        @include breakpoint(large) {
+            padding-top: 0;
+        }
+    }
+    .foot__features,
+    .foot__resources,
+    .foot__company {
+        margin-bottom: rem(45);
+        h4 {
+            color: hsl(0, 0%, 100%);
+            margin-bottom: rem(15);
+
+            @include breakpoint(large) {
+                width: 270px;
+            }
+        }
+        ul {
+            padding-left: 0;
+            margin: 0 rem(90) 0;
+            
+            a{
+                display: block;
+                text-decoration: none;
+                color: hsl(0, 0%, 75%);
+                margin-bottom: 16px;
+
+                &:hover {
+                    color: var(--cyan);
+                }
+
+                @include breakpoint(large) {
+                    text-align: left;
+                }
+            }
+        }
+    }
+    .socials {
+        cursor: pointer;
+        padding-bottom: rem(50);
+        
+        img {
+            filter: brightness(0) invert(1);
+            margin-right: rem(25);
+
+            &:hover {
+                filter: none;
+            }
+        }
+    }
+}

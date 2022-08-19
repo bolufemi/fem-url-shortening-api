@@ -1,0 +1,62 @@
+@use "sass:math";
+
+// Source: https://css-tricks.com/snippets/sass/px-to-em-functions/
+@function rem($pixels, $context: 16) {
+	@return (math.div($pixels, $context)) * 1rem;
+}
+
+$breakpoints-up: ("medium": "40em", "large": "64em", "xlarge": "87.5em");
+
+@mixin breakpoint($size) {
+    @media(min-width: map-get($breakpoints-up, $size)){
+        @content;
+    }
+}
+
+%btn {
+    font-size: rem(17);
+    font-family: 'Poppins';
+    font-weight: 700;
+    color: white;
+    background-color: var(--cyan);
+    border: none;
+    padding: rem(15) rem(40) rem(15) rem(40);
+    border-radius: 32px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--faded-cyan);
+    }
+}
+
+%shrtcode__btn {
+    padding: rem(12) rem(115);
+    border: none;
+    border-radius: 8px;
+    font-family: var(--font-poppins);
+    font-size: rem(15);        
+    font-weight: 700;
+    color: white;
+    background-color: var(--cyan);
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--faded-cyan);
+    }
+}
+
+%ribbon {
+    position: absolute;
+    height: 50px;
+    width: 12px;
+    background-color: var(--cyan);
+    margin-top: -48px;
+    transform: translateX(160px);
+    flex-shrink: 0;
+
+    @include breakpoint(large) {
+        margin: 0;
+        transform: rotate(90deg);
+        height: 33px;
+    }
+}

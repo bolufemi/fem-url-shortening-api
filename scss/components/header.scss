@@ -1,0 +1,124 @@
+@use '../util' as *;
+
+header {
+    padding-top: rem(40);
+
+    @include breakpoint(large) {
+        padding-top: rem(55);
+    }
+
+    .header__logo {
+        float: left;
+    }
+
+    .toggler {
+        content: url(../images/icon-hamburger.svg);
+        -webkit-appearance: none;
+        cursor: pointer;
+        float: right;
+
+        &:checked ~ nav {
+            display: block;
+        }
+    
+        @include breakpoint(large){
+            display: none;
+        }
+    }    
+
+    nav {
+        display: none;
+        clear: both;
+
+        @include breakpoint(large) {
+            display: initial;
+            clear: none;
+            float: left;
+            width: 85%;
+        }
+
+        .menu__links {
+            position: absolute;
+            top: 97px;
+            left: 8%; //25px
+            background-color: var(--dark-violet);
+            border-radius: 8px;
+            width: 85%; //327px
+            height: 385px;
+            text-align: center;
+            padding: rem(40) 0 0 0;
+            transition: all .5s;
+        
+            @include breakpoint(large) {
+                position: relative;
+                top: 0;
+                left: 0;
+                width: auto;
+                max-height: rem(45);
+                padding-top: 0;
+                background: none;
+                margin-left: rem(40);
+            }
+        
+            li {
+                list-style: none;
+                margin-bottom: rem(30);
+        
+                @include breakpoint(large) {
+                    margin-bottom: 0;
+                    margin-right: rem(32);
+                    float: left;
+                }
+            }    
+        }
+        .menu__link {
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+            
+        
+            @include breakpoint(large) {
+                font-size: rem(13);
+                color: var(--grayish-violet);
+        
+                &:hover {
+                    color: var(--vd-blue);
+                }
+            }
+        }
+        .secondary__links {
+            border-top: .4px solid var(--grayish-violet);
+            margin: 0 rem(24);
+
+            @include breakpoint(large) {
+                float: right;
+                border-top: none;
+            }
+
+            #odd__link {
+                padding-top: rem(33);
+                margin-bottom: rem(42);
+            
+                @include breakpoint(large) {
+                    padding-top: 0;
+                    margin-top: 0;
+                }
+            }
+            #custom__link {
+                background-color: var(--cyan);
+                color: white;
+                padding: rem(15) rem(100) rem(15) rem(100);
+                border-radius: 32px;
+                transition: 0.3s;
+            
+                &:hover {
+                    background-color: var(--faded-cyan);
+                }
+            
+                @include breakpoint(large) {
+                    padding: rem(14) rem(25) rem(14) rem(25);
+                }    
+            }        
+        }
+    }
+}

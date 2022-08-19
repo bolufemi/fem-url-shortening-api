@@ -1,0 +1,195 @@
+@use '../util' as *;
+
+.features {
+    background-color: hsl(210, 46%, 95%);
+    transform: translateY(-90px);
+    padding-bottom: rem(40);
+
+    @include breakpoint(large) {
+        padding-bottom: rem(120);
+    }
+
+    .url__list {
+        display: none;
+        padding-top: rem(122);
+        list-style: none; 
+        padding-left: 0;
+    
+        @include breakpoint(large) {
+            width: 95%;
+            padding: rem(100) 0 0 rem(60);
+        }
+    
+        li {
+            margin-top: rem(16);
+            padding: rem(16) 0 rem(16) 0;
+            background-color: white;  
+            border-radius: 4px; 
+    
+            @include breakpoint(large) {
+                display: flex;
+                justify-content: space-between;
+                padding-top: rem(20);
+            }
+                
+            .url__link {
+                margin: 0 rem(18) rem(16) rem(18);
+                height: 25px;
+                overflow: hidden;
+                font-size: rem(15); 
+    
+                @include breakpoint(large) {
+                    margin: 0 rem(35);
+                }    
+            }
+    
+            .shrtcode {
+                padding: rem(16) 0 0 rem(18);
+                border-top: 1px solid var(--gray);
+    
+                @include breakpoint(large) {
+                    display: flex;
+                    gap: 25px;
+                    border: none;
+                    padding: 0;
+                    margin-right: rem(24);
+                }
+
+                .shrtcode__link {
+                    color: var(--cyan);
+                    padding-bottom: rem(16);
+                    font-size: rem(15); 
+
+                    @include breakpoint(large) {
+                        padding-bottom: 0;
+                    }
+                }
+    
+                .copybtn {
+                    @extend %shrtcode__btn;
+    
+                    @include breakpoint(large) {
+                        padding: rem(8) rem(30);
+                        margin-top: rem(-10);
+                    }
+                }    
+            }
+    
+        }
+    }    
+    
+
+    h2 {
+        padding-top: rem(173);
+        text-align: center;
+        font-size: clamp(rem(26), 1.43rem + 0.85vw, rem(35));
+
+        @include breakpoint(large) {
+            padding-top: rem(215);
+        }
+    }
+    .title__content {
+        text-align: center;
+        margin-top: rem(25);
+        color: var(--grayish-violet);
+
+        @include breakpoint(large) {
+            margin: rem(23) rem(335) 0;
+            font-size: rem(18);
+        }
+    }
+    .features__content {
+        @include breakpoint(large) {
+            position: relative;
+            display: flex;
+            margin-top: rem(60);
+        }
+    }
+    .features__2 {
+     @include breakpoint(large) {
+         transform: translateY(45px);
+         margin-left: rem(30);
+        }
+    }
+
+    .features__3 {
+        @include breakpoint(large) {
+            transform: translateY(90px);
+            margin-left: rem(30);
+        }
+    }
+
+    .feature__logo {
+        background-color: var(--dark-violet);
+        padding: rem(21);
+        margin-top: rem(50);
+        text-align: center;
+        width: 90px;
+        border-radius: 50%;
+        transform: translateX(120px);
+        position: relative;
+        z-index: 2;
+
+        @include breakpoint(large) {
+            transform: translateX(50px);
+            margin-top: 0;
+        }
+   }
+   .app__features {
+    background-color: white;
+    padding: rem(85) 0 rem(40);
+    transform: translateY(-50px);
+
+    @include breakpoint(large) {
+        height: 268px;
+        width: 355px;
+        margin-right: 0;
+    }
+       
+        h3 {
+        text-align: center;
+        @include breakpoint(large) {
+            text-align: left;
+            margin-left: rem(34);
+        }
+       }
+       .feature__content {
+        text-align: center;
+        margin: rem(20) rem(42) 0;
+        color: var(--grayish-violet);
+        font-size: rem(14);
+
+        @include breakpoint(large) {
+            text-align: left;
+            margin: rem(24) rem(34) 0;
+            font-size: rem(15);
+        }
+       }
+       
+   }
+
+   #first__ribbon {
+    @extend %ribbon;
+       @include breakpoint(large) {
+            top: 190px;
+            left: 365px;
+       }
+   }
+   #second__ribbon {
+    @extend %ribbon;
+       @include breakpoint(large) {
+        top: 190px;
+        left: 750px;
+       }
+   }
+   #detail__records,
+   #fully__customizable {
+       margin-top: 0;
+   }
+   #fully__customizable {
+    width: 90px;
+   }
+
+}
+
+

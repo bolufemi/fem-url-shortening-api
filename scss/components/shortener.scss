@@ -1,0 +1,150 @@
+@use '../util' as *;
+
+.shortener {
+    margin-top: rem(90);
+    position: relative;
+    z-index: 2;
+    
+    @include breakpoint(large) {
+        margin-top: rem(120);
+    }
+
+    .container {
+
+        @include breakpoint(large) {
+            width: 75%;
+            border-radius: 16px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            padding: rem(24);
+            position: relative;
+            background-color: var(--vd-blue);
+            border-radius: 8px;
+
+            @include breakpoint(large) {
+                flex-direction: row;
+                gap: 25px;
+                padding: rem(53) rem(63);
+            }
+
+            input {
+                font-family: var(--font-poppins);
+                font-size: clamp(rem(18), 1.04rem + 0.38vw, rem(22));  
+                width: 100%;      
+                padding: rem(17);
+                border: none;
+                border-radius: 8px;
+
+                @include breakpoint(large) {
+                    // padding: rem(22) rem(300) rem(22) rem(17);
+                    width: 300%;
+                    padding: rem(22);
+                }
+            }
+
+            .form__btn {
+                margin-top: rem(17);
+                width: 100%;
+                padding: rem(16);
+                border: none;
+                border-radius: 8px;
+                font-family: var(--font-poppins);
+                font-size: clamp(rem(18), 1.04rem + 0.38vw, rem(22));        
+                font-weight: 700;
+                color: white;
+                background-color: var(--cyan);
+                cursor: pointer;
+
+                &:hover {
+                    background-color: var(--faded-cyan);
+                }
+
+                @include breakpoint(large) {
+                    margin-top: 0;
+                    // padding: rem(22) rem(42) rem(22) rem(42);
+                    padding: rem(22);
+                }
+            }
+
+            .error__msg {
+                font-style: italic;
+                color: var(--red);
+                margin-top: 10px;
+                display: none;
+
+                @include breakpoint(large) {
+                    position: absolute;
+                    bottom: 25px;
+                }
+            }    
+        }
+
+    }
+}
+
+// .url__list {
+//     display: none;
+//     margin: rem(250) auto 0;
+//     width: 85%;
+//     list-style: none; 
+//     padding-left: 0;
+
+//     @include breakpoint(large) {
+//         width: 75%;
+//     }
+
+//     li {
+//         margin-top: 16px;
+//         padding: rem(16) 0 rem(16) 0;
+//         background-color: white;  
+//         border-radius: 4px; 
+
+//         @include breakpoint(large) {
+//             display: grid;
+//             grid-template-columns: 90% 10%;
+//             padding-top: 25px;
+//         }
+
+//         @include breakpoint(large) {
+//             display: grid;
+//             grid-template-columns: 3fr 1fr;
+//             padding-top: 25px;
+//         }
+        
+//         .url__link {
+//             margin: 0 18px 16px 18px ;
+//             overflow: hidden;
+//             font-size: rem(18);
+
+//             @include breakpoint(large) {
+//                 font-size: rem(25);
+//                 margin-bottom: 0;
+//             }    
+//         }
+
+//         .shrtcode {
+//             padding-top: rem(16);
+//             padding-left: rem(18);
+//             border-top: 1px solid var(--gray);
+
+//             @include breakpoint(large) {
+//                 border: none;
+//                 padding-top: 0
+//             }
+
+//             button {
+//                 @extend %shrtcode__btn;
+
+//                 @include breakpoint(large) {
+//                     padding: rem(15) rem(32);
+//                 }
+//             }    
+//         }
+
+//     }
+// }    
+
+

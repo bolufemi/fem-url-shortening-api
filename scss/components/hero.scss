@@ -1,0 +1,59 @@
+@use '../util' as *;
+
+.hero {
+    margin-top: -10px;
+
+    .container {
+        @include breakpoint(large) {
+            display: grid;
+            grid-template-columns: 55% 45%;
+        }
+
+        .vec__img img {
+            object-fit: cover;
+            height: rem(340);
+            margin-top: rem(27);
+        
+            @include breakpoint(large) {
+                height: auto;
+                grid-column: 2;
+            }
+        }
+        .intro__section {
+            text-align: center;
+            margin-top: rem(34);
+        
+            @include breakpoint(large) {
+                text-align: left;
+                grid-column: 1;
+                grid-row: 1;
+                margin-top: rem(105);
+            }
+            h1 {
+                font-size: clamp(rem(40), 1.8rem + 3vw, rem(72));
+                line-height: 42px;
+        
+                @include breakpoint(large) {
+                    line-height: 80px;
+                    margin-left: 0;
+                }
+            }
+        
+            p {
+                font-size: clamp(rem(18), 1.06rem + 0.28vw, rem(21));
+                color: var(--grayish-violet);
+                margin-top: rem(25);
+                word-spacing: .5px;
+        
+                @include breakpoint(large) {
+                    margin-right: rem(140)
+                }
+            }
+        
+            .btn-primary {
+                @extend %btn;
+                margin-top: rem(33);
+            }
+        }        
+    }
+}
