@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABO1BMVEUAAAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////l9Pff8fS54ein2eOn2eL9/v684unr9vj7/f7c8PSl2eKHzNil2OLv+Prz+vue1eB3xdOq2uPm9Pf29/vy8/n3/Py13+eEyteZ097P6u/2+/zByeKOm8r8/f7u+Pq+4+qOz9uU0dzo9fjb4O5meLbh5fH0+vvV7fHx+fv8/P2Gk8Wbps+44eim2eLW2+xkdrXO1Oit3OWttthperja3u7u+Pn6+/2hrNJneLfFy+P7+/23v92IlcbN0ufx8/nj5/Kbp9BsfbltfrqAj8ORnsvg5PD+/v/v8ffQ1em0vduqtNfn6vS/61TcAAAAHHRSTlMAAAQqbK3Z8v0DN5ff+xqJ6jbC/kHBAjjp3qz8qSKHsgAAAAFiS0dEAf8CLd4AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfiChMPAx5FOtlkAAABSUlEQVQ4y4WTZ2OCMBCGc4IMEXAPjB10771t7dLuXbv3/v+/oNigIYjN+4HcJU9CcgMhVxASxLAkK4oshUUhBIgVqBEtqmNXelSLqF4EwDBjmFHMNADoejyRxD4lE/EGAZCScICkFCGc/YHrDkHOACON2yhtOABkTNxWZgYQZHPeqWKH18tlAakas6ezi3E1FQl5Fuhm3LyARD0AsIs9vSSmIrJwC9DXPzA4NEx8C0ktwMjo2PiE3YgFkokxOdUEpmdm5+YXXEBGCjEWl5bpHVZKq2tlMq+gAjHWNza9r9jarpD5QuMX1Z3dv3Fvn72T3LzkweFRfSgd+xJGn3lyeuZ8K+csYNFAXVzWrqr+bDmBoqG+vqnd3t3bDOCE2push8en55fXNzZZTLrfPz6/vn+oX083t2C4JccvWm7Z8xuH33r85v2v/X8Bp/FiyVLnL/0AAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMTAtMTlUMTU6MDM6MzArMDI6MDCzEaEaAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTEwLTE5VDE1OjAzOjMwKzAyOjAwwkwZpgAAAFd6VFh0UmF3IHByb2ZpbGUgdHlwZSBpcHRjAAB4nOPyDAhxVigoyk/LzEnlUgADIwsuYwsTIxNLkxQDEyBEgDTDZAMjs1Qgy9jUyMTMxBzEB8uASKBKLgDqFxF08kI1lQAAAABJRU5ErkJggg==">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet"> 
+  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+  <script type="module" crossorigin src="/assets/index.11d00b84.js"></script>
+  <link rel="stylesheet" href="/assets/index.d578d940.css">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <a href="/" class="header__logo">
+        <img src="/assets/logo.3c0c11fc.svg">
+      </a>
+
+      <input type="checkbox" class="toggler">
+
+      <nav>
+        <ul class="menu__links">
+          <li><a href="#" class="menu__link">Features</a></li>
+          <li><a href="#" class="menu__link">Pricing</a></li>
+          <li><a href="#" class="menu__link">Resources</a></li>
+          <div class="secondary__links">
+            <li id="odd__link"><a href="#" class="menu__link">Login</a></li>
+            <li><a href="#" class="menu__link" id="custom__link">Sign Up</a></li>  
+          </div> 
+        </ul>    
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="vec__img">
+        <img src="/assets/illustration-working.fae884c2.svg">
+      </div>
+      <div class="intro__section">
+        <h1>More than just shorter links</h1>
+        <p>  Build your brand’s recognition and get detailed insights on how your links are performing.</p>
+        <button class="btn-primary">Get Started</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="shortener">
+    <div class="container">
+      <form id="myForm">
+        <input type="text" placeholder="Shorten a link here...">
+        <span class="error__msg">Please add a link </span>  
+        <input type="submit" value="Shorten It!" class="form__btn">
+      </form>       
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <div class="url__list"></div>
+
+      <h2>Advanced Statistics</h2>
+      <p class="title__content">Track how your links are performing across the web with our advanced statistics dashboard.
+      </p>
+  
+      <div class="features__content">
+        <div class="features__1">
+          <div class="feature__logo">
+            <img src="/assets/icon-brand-recognition.eff49c7b.svg">
+          </div>
+          <div class="app__features">
+            <h3>Brand Recognition</h3>
+            <p class="feature__content">Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content.
+            </p>
+          </div>  
+        </div>
+        <div class="ribbon" id="first__ribbon"></div>
+        <div class="features__2">
+          <div class="feature__logo" id="detail__records">
+            <img src="/assets/icon-detailed-records.4d8ad978.svg">
+          </div>
+          <div class="app__features">
+            <h3>Detailed Records</h3>
+            <p class="feature__content">  Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.
+            </p>
+          </div>  
+        </div>
+        <div class="ribbon" id="second__ribbon"></div>
+        <div class="features__3">
+          <div class="feature__logo" id="fully__customizable">
+            <img src="/assets/icon-fully-customizable.56af2809.svg">
+          </div>
+          <div class="app__features">
+            <h3>Fully Customizable</h3>
+            <p class="feature__content"> Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.        
+            </p>
+          </div>  
+        </div>  
+      </div>  
+    </div>
+  </section>
+
+  <section class="app__cta">
+    <div class="container">
+      <h2>Boost your links today</h2>
+      <button class="btn-secondary">Get Started</button>  
+    </div>
+  </section>
+
+  <section class="footer">
+    <div class="container">
+      <div class="foot__logo">
+        <img src="/assets/logo.3c0c11fc.svg">
+      </div>
+
+      <div class="foot__features">
+        <h4>Features</h4>
+        <ul>
+          <a href="#">Link Shortening</a>
+          <a href="#">Branded Links</a>
+          <a href="#">Analytics</a>  
+        </ul>
+      </div>
+
+      <div class="foot__resources">
+        <h4>Resources</h4>
+        <ul>
+          <a href="#">Blog</a>
+          <a href="#">Developers</a>
+          <a href="#">Support</a>  
+        </ul>
+      </div>
+
+      <div class="foot__company">
+        <h4>Company</h4>
+        <ul>
+          <a href="#">About</a>
+          <a href="#">Our Team</a>
+          <a href="#">Careers</a>
+          <a href="#">Contact</a>  
+        </ul>
+      </div>
+
+      <div class="socials">
+        <img src="/assets/icon-facebook.7acd105e.svg">
+        <img src="/assets/icon-twitter.2941e958.svg">
+        <img src="/assets/icon-youtube.5171bd05.svg">
+        <img src="/assets/icon-instagram.4ffeb43d.svg">
+      </div>
+    </div>
+  </section>
+  
+  
+</body>
+</html>
